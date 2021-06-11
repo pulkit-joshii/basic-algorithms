@@ -29,7 +29,7 @@ pair <int,int> maxmin(vector <int> array, int start, int end)
     }
     else
     {
-        int mid = (start + end) / 2;
+        int mid = start + (end - start) / 2;
         pair <int,int> left_min_max = maxmin(array, start, mid);
         pair <int,int> right_min_max = maxmin(array, mid + 1, end);
         if(left_min_max.first < right_min_max.first)    //comparing minimums of left and right array
